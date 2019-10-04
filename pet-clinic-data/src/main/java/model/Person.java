@@ -1,4 +1,4 @@
-package com.gluma.springpetclinic.model;
+package model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PetType {
-    private String name;
+public class Person {
+    private String firstName;
+    private String latName;
 }
