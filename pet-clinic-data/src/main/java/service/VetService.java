@@ -3,5 +3,11 @@ package service;
 import model.Vet;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface VetService extends JpaRepository<Vet, Long> {
+import java.util.Set;
+
+public interface VetService{
+    Vet findByLastName(String lastName);
+    Vet findById(Long id);
+    Vet save(Vet vet);
+    Set<Vet> findAll();
 }
