@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.MappedSuperclass;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
