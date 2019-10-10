@@ -1,12 +1,12 @@
-package service.map;
+package springpetclinic.service.map;
 
-import model.Owner;
-import model.Vet;
-import service.CrudService;
-import service.OwnerService;
+import springpetclinic.model.Owner;
+import org.springframework.stereotype.Service;
+import springpetclinic.service.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
@@ -37,7 +37,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     public Owner findByLastName(String lastName) {
         return this.findAll()
                 .stream()
-                .filter(vet -> vet.getLatName().equalsIgnoreCase(lastName))
+                .filter(vet -> vet.getLastname().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(new Owner(null,null,null));
     }

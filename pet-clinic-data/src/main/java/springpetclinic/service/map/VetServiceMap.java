@@ -1,18 +1,19 @@
-package service.map;
+package springpetclinic.service.map;
 
-import model.Vet;
-import service.CrudService;
-import service.VetService;
+import springpetclinic.model.Vet;
+import org.springframework.stereotype.Service;
+import springpetclinic.service.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Vet findByLastName(String lastName) {
-        return this.findAll()
+        return super.findAll()
                 .stream()
-                .filter(vet -> vet.getLatName().equalsIgnoreCase(lastName))
+                .filter(vet -> vet.getLastname().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(new Vet(null,null,null,null));
     }

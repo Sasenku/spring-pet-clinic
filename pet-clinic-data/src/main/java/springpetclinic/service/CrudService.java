@@ -1,4 +1,4 @@
-package service;
+package springpetclinic.service;
 
 import java.util.Set;
 

@@ -1,6 +1,9 @@
-package model;
+package springpetclinic.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.MappedSuperclass;
 
@@ -11,11 +14,11 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class Person extends BaseEntity{
     private String firstName;
-    private String latName;
+    private String lastname;
 
-    public Person(Long id, String firstName, String latName) {
+    public Person(Long id, String firstName, String lastname) {
         super(id);
         this.firstName = firstName;
-        this.latName = latName;
+        this.lastname = lastname;
     }
 }
