@@ -11,9 +11,8 @@ import java.time.LocalDate;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pet extends BaseEntity{
-    private PetType petType;
-    private Owner owner;
-    private LocalDate birthDate;
-    private String name;
+public class Visit extends BaseEntity{
+    private LocalDate date;
+    private String description;
+    private Pet pet;
 }

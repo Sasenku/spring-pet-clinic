@@ -13,7 +13,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
     public Vet findByLastName(String lastName) {
         return super.findAll()
                 .stream()
-                .filter(vet -> vet.getLastname().equalsIgnoreCase(lastName))
+                .filter(vet -> vet.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(new Vet(null,null,null,null));
     }
@@ -30,7 +30,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet vet) {
-        return super.save(vet.getId(),vet);
+        return super.save(vet);
     }
 
     @Override
