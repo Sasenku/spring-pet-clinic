@@ -39,6 +39,6 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
                 .stream()
                 .filter(vet -> vet.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
-                .orElse(new Owner(null,null,null));
+                .orElse(new Owner());
     }
 }

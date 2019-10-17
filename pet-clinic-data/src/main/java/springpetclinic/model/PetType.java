@@ -1,14 +1,31 @@
 package springpetclinic.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
-@EqualsAndHashCode(callSuper = true)
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PetType extends BaseEntity{
+@Entity
+@Table(name = "types")
+public class PetType extends BaseEntity {
+
+    @Builder
+    public PetType(Long id, String name) {
+        super(id);
+        this.name = name;
+    }
+
+    @Column(name = "name")
     private String name;
+
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

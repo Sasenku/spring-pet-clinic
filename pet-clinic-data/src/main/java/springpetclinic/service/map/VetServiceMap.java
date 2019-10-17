@@ -15,7 +15,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
                 .stream()
                 .filter(vet -> vet.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
-                .orElse(new Vet(null,null,null,null));
+                .orElse(new Vet());
     }
 
     @Override
