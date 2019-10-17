@@ -1,10 +1,11 @@
-package springpetclinic.service.springdatajpa;
+package springpetclinic.springdatajpa;
 
-import com.gluma.sfgpetclinic.model.Vet;
-import com.gluma.sfgpetclinic.repositories.VetRepository;
-import com.gluma.sfgpetclinic.services.VetService;
+
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import springpetclinic.model.Vet;
+import springpetclinic.repositories.VetRepository;
+import springpetclinic.service.VetService;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -44,5 +45,10 @@ public class VetSDJpaService implements VetService {
     @Override
     public void deleteById(Long aLong) {
         vetRepository.deleteById(aLong);
+    }
+
+    @Override
+    public Vet findByLastName(String lastName) {
+        return vetRepository.findByLastName(lastName);
     }
 }

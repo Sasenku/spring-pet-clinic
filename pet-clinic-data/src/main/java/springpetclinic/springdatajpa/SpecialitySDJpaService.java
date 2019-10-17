@@ -1,10 +1,9 @@
-package springpetclinic.service.springdatajpa;
+package springpetclinic.springdatajpa;
 
-import com.gluma.sfgpetclinic.model.Speciality;
-import com.gluma.sfgpetclinic.repositories.SpecialityRepository;
-import com.gluma.sfgpetclinic.services.SpecialityService;
+
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import springpetclinic.model.Speciality;
 
 import java.util.HashSet;
 import java.util.Set;

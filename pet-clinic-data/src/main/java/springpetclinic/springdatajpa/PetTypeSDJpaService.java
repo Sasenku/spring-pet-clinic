@@ -1,10 +1,10 @@
-package springpetclinic.service.springdatajpa;
+package springpetclinic.springdatajpa;
 
-import com.gluma.sfgpetclinic.model.PetType;
-import com.gluma.sfgpetclinic.repositories.PetTypeRepository;
-import com.gluma.sfgpetclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import springpetclinic.model.PetType;
+import springpetclinic.repositories.PetTypeRepository;
+import springpetclinic.service.PetTypeService;
 
 import java.util.HashSet;
 import java.util.Set;

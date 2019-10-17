@@ -1,17 +1,17 @@
-package springpetclinic.service.springdatajpa;
+package springpetclinic.springdatajpa;
 
-import com.gluma.sfgpetclinic.model.Visit;
-import com.gluma.sfgpetclinic.repositories.VisitRepository;
-import com.gluma.sfgpetclinic.services.VisitService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import springpetclinic.model.Visit;
+import springpetclinic.repositories.VisitRepository;
+import springpetclinic.service.VisitService;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class VisitSDJpaService implements VisitService{
+public class VisitSDJpaService implements VisitService {
 
     private final VisitRepository visitRepository;
 

@@ -1,12 +1,12 @@
-package springpetclinic.service.springdatajpa;
+package springpetclinic.springdatajpa;
 
-import com.gluma.sfgpetclinic.model.Owner;
-import com.gluma.sfgpetclinic.repositories.OwnerRepository;
-import com.gluma.sfgpetclinic.repositories.PetRepository;
-import com.gluma.sfgpetclinic.repositories.PetTypeRepository;
-import com.gluma.sfgpetclinic.services.OwnerService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import springpetclinic.model.Owner;
+import springpetclinic.repositories.OwnerRepository;
+import springpetclinic.repositories.PetRepository;
+import springpetclinic.repositories.PetTypeRepository;
+import springpetclinic.service.OwnerService;
 
 import java.util.HashSet;
 import java.util.Set;
