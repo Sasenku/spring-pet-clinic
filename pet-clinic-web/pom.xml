@@ -9,7 +9,7 @@
 
     <artifactId>pet-clinic-web</artifactId>
     <version>1.0.6</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <!-- Web dependencies -->

@@ -9,7 +9,7 @@
 
     <artifactId>pet-clinic-data</artifactId>
     <version>1.0.6</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
