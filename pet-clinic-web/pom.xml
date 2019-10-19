@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pet-clinic-web</artifactId>
-  <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.6</version>
 
     <properties>
         <!-- Web dependencies -->
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.gluma</groupId>
             <artifactId>pet-clinic-data</artifactId>
-            <version>1.0.6-SNAPSHOT</version>
+            <version>1.0.6</version>
         </dependency>
 
         <dependency>
