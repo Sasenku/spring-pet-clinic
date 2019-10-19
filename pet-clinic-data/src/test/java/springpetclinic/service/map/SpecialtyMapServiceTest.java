@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SpecialtyMapServiceTest {
 
     SpecialtyMapService specialtyMapService;
-    Long SPECIALTY_ID=1L;
+    final Long SPECIALTY_ID=1L;
 
     @BeforeEach
     void setUp() {

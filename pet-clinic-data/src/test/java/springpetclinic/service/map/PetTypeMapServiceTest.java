@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PetTypeMapServiceTest {
 
     PetTypeMapService petTypeMapService;
-    Long PET_TYPE_ID = 1L;
+    final Long PET_TYPE_ID = 1L;
 
     @BeforeEach
     void setUp() {
