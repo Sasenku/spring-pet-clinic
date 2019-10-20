@@ -32,7 +32,7 @@ class OwnerSDJpaServiceTest {
     @Mock
     PetTypeRepository petTypeRepository;
 
-    //@InjectMocks mozna tez tak
+    @InjectMocks //mozna tez tak
     OwnerSDJpaService ownerSDJpaService;
 
     Owner owner;
@@ -42,8 +42,8 @@ class OwnerSDJpaServiceTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.initMocks(this);
-        ownerSDJpaService = new OwnerSDJpaService(ownerRepository,petRepository,petTypeRepository);
+//        MockitoAnnotations.initMocks(this);
+//        ownerSDJpaService = new OwnerSDJpaService(ownerRepository,petRepository,petTypeRepository);
         owner = Owner.builder().id(OWNER_ID).lastName(OWNER_LAST_NAME).build();
     }
 
@@ -59,6 +59,7 @@ class OwnerSDJpaServiceTest {
     @Test
     void findAll() {
         Set<Owner> ownerSet = new HashSet<>();
+        ownerSet.add(owner);
         ownerSet.add(Owner.builder().id(2L).lastName("King").build());
 
         when(ownerRepository.findAll()).thenReturn(ownerSet);
@@ -66,13 +67,13 @@ class OwnerSDJpaServiceTest {
         Set<Owner> ownerSetReturner = ownerSDJpaService.findAll();
 
         assertNotNull(ownerSetReturner);
-        assertEquals(1,ownerSetReturner.size());
+        assertEquals(2,ownerSetReturner.size());
     }
 
     @Test
     void findById() {
         when(ownerRepository.findById(anyLong())).thenReturn(Optional.of(owner));
-        Owner owner2 =  ownerSDJpaService.findById(1L);
+        Owner owner2 =  ownerSDJpaService.findById(OWNER_ID);
 
         assertNotNull(owner2);
     }
@@ -104,8 +105,8 @@ class OwnerSDJpaServiceTest {
 
     @Test
     void deleteById() {
-        ownerSDJpaService.deleteById(1L);
+        ownerSDJpaService.deleteById(OWNER_ID);
 
-        verify(ownerRepository).deleteById(1L);
+        verify(ownerRepository).deleteById(anyLong());
     }
 }
